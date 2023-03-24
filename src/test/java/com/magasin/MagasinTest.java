@@ -222,7 +222,7 @@ class MagasinTest {
         }
 
         //THEN
-        assertEquals("Magic Power" + ", " + -3 + ", " + 11, items[0].toString());
+        assertEquals("Magic Power" + ", " + 1 + ", " + 11, items[0].toString());
     }
 
 
