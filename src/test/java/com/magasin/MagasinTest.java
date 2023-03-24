@@ -19,10 +19,10 @@ class MagasinTest {
     void updateQuality13Days() {
         //Given
         Item[] items = new Item[4];
-        items[0] = new Item("lambda product", 3,7);
-        items[1] = new Item("Kryptonite", 0, 80);
-        items[2] = new Item("Comté",5,10);
-        items[3] = new Item("Pass VIP Concert", 12,10);
+        items[0] = new LambdaProduct("lambda product", 3,7);
+        items[1] = new Kryptonite("Kryptonite", 0, 80);
+        items[2] = new Comte("Comté",5,10);
+        items[3] = new PassVip("Pass VIP Concert", 12,10);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -41,10 +41,10 @@ class MagasinTest {
     void updateQuality7Days() {
         //Given
         Item[] items = new Item[4];
-        items[0] = new Item("lambda product", 3,7);
-        items[1] = new Item("Kryptonite", 0, 80);
-        items[2] = new Item("Comté",5,10);
-        items[3] = new Item("Pass VIP Concert", 12,10);
+        items[0] = new LambdaProduct("lambda product", 3,7);
+        items[1] = new Kryptonite("Kryptonite", 0, 80);
+        items[2] = new Comte("Comté",5,10);
+        items[3] = new PassVip("Pass VIP Concert", 12,10);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -63,10 +63,10 @@ class MagasinTest {
     void updateQuality7Days0Quality() {
         //Given
         Item[] items = new Item[4];
-        items[0] = new Item("lambda product", 3,0);
-        items[1] = new Item("Kryptonite", 0, 80);
-        items[2] = new Item("Comté",3,0);
-        items[3] = new Item("Pass VIP Concert", 3,0);
+        items[0] = new LambdaProduct("lambda product", 3,0);
+        items[1] = new Kryptonite("Kryptonite", 0, 80);
+        items[2] = new Comte("Comté",3,0);
+        items[3] = new PassVip("Pass VIP Concert", 3,0);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -85,7 +85,7 @@ class MagasinTest {
     void updateQuality7DaysLambdaProduct() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("lambda product", 3,5);
+        items[0] = new LambdaProduct("lambda product", 3,5);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -100,7 +100,7 @@ class MagasinTest {
     void updateQuality7DaysKryptonite() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("Kryptonite", 0, 80);
+        items[0] = new Kryptonite("Kryptonite", 0, 80);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -115,7 +115,7 @@ class MagasinTest {
     void updateQuality7DaysComte() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("Comté",3,5);
+        items[0] = new Comte("Comté",3,5);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -130,7 +130,7 @@ class MagasinTest {
     void updateQuality7DaysPass() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("Pass VIP Concert", 3,5);
+        items[0] = new PassVip("Pass VIP Concert", 3,5);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -146,7 +146,7 @@ class MagasinTest {
     void updateQuality7DaysLambdaProduct15quality23sellin() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("lambda product", 23,15);
+        items[0] = new LambdaProduct("lambda product", 23,15);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -162,7 +162,7 @@ class MagasinTest {
     void updateQuality7DaysComte25Quality() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("Comté",4,25);
+        items[0] = new Comte("Comté",4,25);
         Magasin target = new Magasin(items);
 
         //WHEN
@@ -177,7 +177,7 @@ class MagasinTest {
     void updateQuality7DaysPass13Sellin() {
         //Given
         Item[] items = new Item[1];
-        items[0] = new Item("Pass VIP Concert", 13,5);
+        items[0] = new PassVip("Pass VIP Concert", 13,5);
         Magasin target = new Magasin(items);
 
         //WHEN
