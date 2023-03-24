@@ -14,9 +14,9 @@ public class Comte extends Item implements Updatable {
 
     private void updateQuality() {
         if (sellIn >= 0)
-            quality++;
+            quality = Math.min(quality+1,50);
         else
-            quality += 2;
+            quality = Math.min(quality+2,50);
     }
 
     private void updateSellIn() {
