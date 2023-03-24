@@ -10,7 +10,7 @@ public class Main {
         items[2] = new Item("Comté", 5, 10);
         items[3] = new Item("Pass VIP Concert", 12, 10);
 
-        Magasin magasin = new Magasin(items);
+        Magasin magasin = new Magasin(items);;
 
         for (int i = 0; i < 13; i++) {
             magasin.updateQuality();
