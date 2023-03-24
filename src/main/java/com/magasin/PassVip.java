@@ -1,6 +1,6 @@
 package com.magasin;
 
-public class PassVip extends Item implements Updatable{
+public class PassVip extends Item implements Updatable {
     public PassVip(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
@@ -13,14 +13,14 @@ public class PassVip extends Item implements Updatable{
     }
 
     private void updateQuality() {
-        if (sellIn>=10)
+        if (sellIn >= 10)
             quality++;
-        if (sellIn<10 && sellIn>=5)
-            quality+=2;
-        if (sellIn<5 && sellIn>=0)
-            quality+=3;
-        if (sellIn<0)
-            quality=0;
+        if (sellIn < 10 && sellIn >= 5)
+            quality += 2;
+        if (sellIn < 5 && sellIn >= 0)
+            quality += 3;
+        if (sellIn < 0)
+            quality = 0;
     }
 
     private void updateSellIn() {

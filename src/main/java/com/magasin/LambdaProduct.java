@@ -1,12 +1,11 @@
 package com.magasin;
 
-public class LambdaProduct extends Item implements Updatable{
+public class LambdaProduct extends Item implements Updatable {
+    private final int qualityPerDay = 1;
+    private final int sellInPerDay = 1;
     public LambdaProduct(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
-
-    private final int qualityPerDay = 1;
-    private final int sellInPerDay = 1;
 
     @Override
     public void update() {
@@ -15,7 +14,7 @@ public class LambdaProduct extends Item implements Updatable{
     }
 
     private void updateQuality() {
-        this.quality = Math.max(0,this.quality-qualityPerDay);
+        this.quality = Math.max(0, this.quality - qualityPerDay);
     }
 
     private void updateSellIn() {

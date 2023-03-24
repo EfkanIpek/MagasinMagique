@@ -1,6 +1,6 @@
 package com.magasin;
 
-public class Comte extends Item implements Updatable{
+public class Comte extends Item implements Updatable {
     public Comte(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
@@ -13,10 +13,10 @@ public class Comte extends Item implements Updatable{
     }
 
     private void updateQuality() {
-        if (sellIn>=0)
+        if (sellIn >= 0)
             quality++;
         else
-            quality+=2;
+            quality += 2;
     }
 
     private void updateSellIn() {
