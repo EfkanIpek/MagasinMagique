@@ -193,5 +193,37 @@ class MagasinTest {
         assertEquals("Pass VIP Concert" + ", " + 6 + ", " + 16, items[0].toString());
     }
 
+    @Test
+    void updateQuality7DaysMagicPower() {
+        //GIVEN
+        Item[] items = new Item[1];
+        items[0] = new MagicPower("Magic Power", 4,25);
+        Magasin target = new Magasin(items);
+
+        //WHEN
+        for (int i = 0; i < 7; i++) {
+            target.updateQuality();
+        }
+
+        //THEN
+        assertEquals("Magic Power" + ", " + -3 + ", " + 5, items[0].toString());
+    }
+
+    @Test
+    void updateQuality7DaysMagicPowerPositiveSellIn() {
+        //GIVEN
+        Item[] items = new Item[1];
+        items[0] = new MagicPower("Magic Power", 8,25);
+        Magasin target = new Magasin(items);
+
+        //WHEN
+        for (int i = 0; i < 7; i++) {
+            target.updateQuality();
+        }
+
+        //THEN
+        assertEquals("Magic Power" + ", " + -3 + ", " + 11, items[0].toString());
+    }
+
 
 }
