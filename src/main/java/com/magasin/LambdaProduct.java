@@ -5,17 +5,20 @@ public class LambdaProduct extends Item implements Updatable{
         super(name, sellIn, quality);
     }
 
+    private final int qualityPerDay = 1;
+    private final int sellInPerDay = 1;
+
     @Override
     public void update() {
-        this.updateQuality();
         this.updateSellIn();
+        this.updateQuality();
     }
 
     private void updateQuality() {
-        this.quality = Math.max(0,this.quality-1);
+        this.quality = Math.max(0,this.quality-qualityPerDay);
     }
 
     private void updateSellIn() {
-        this.sellIn--;
+        this.sellIn -= sellInPerDay;
     }
 }
